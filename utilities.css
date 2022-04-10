@@ -1,0 +1,99 @@
+:root{
+    --bodyBgColor:#212f50;
+    --BgColor1:#253b6d;
+    --BgColor2:#4161ad;
+    --BgColor3:#4d648d;
+    --BgColor4:#283655 ;
+    --BgColor5:rgba(41, 41, 97, 0.76);
+    --BgColor6:rgba(10, 10, 22, 0.76);
+    --BgColor7:rgba(12, 12, 12, 0.411);
+    --primaryColor:#6c63ff;
+    --hoverColor:#9c98f6;
+    --secondaryColor:rgb(97, 96, 96);
+    --colorWhite:white;
+    --colorRed:rgb(250, 82, 82);
+    --bgcolorWhite:white;
+    --colorBlack:black;
+    --muted:rgb(187, 184, 184);
+    --color1:#fe4a49;
+    --red:#f82d2d;
+    --blue:rgba(48, 65, 223, 0.74);
+    --green:rgba(42, 182, 37, 0.74);
+    --color2: #2ab7ca ;
+    --color3: #fed766;
+    --color4: #0e9aa7;
+    --color5:#35a79c;
+    --color6:#f37736 ;
+   --facebok:rgb(11, 26, 161);
+   --linkdin:rgba(37, 52, 182, 0.74);
+   --twitter:rgb(11, 143, 161);
+   --insta:rgb(184, 20, 184);
+
+    /* navHeight */
+    --navHeight:6rem;
+    /* greater than 768px */
+    --containerWidthLg:80%;
+    /* 768px */
+    --containerWidthMd:90%;
+    /* less than 768px */
+    --containerWidthSm:94%;
+    --transition500:500ms;
+    --transition200:200ms;
+}
+a{
+    color: var(--colorWhite);
+    transition: var(--transition500);
+}
+img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    background-color: var(--colorWhite);
+    color: var(--colorBlack);
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition500);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.btn:hover{
+    background-color: transparent;
+    color: var(--colorWhite);
+    border-color: var(--colorWhite);
+}
+.btn-red{
+    cursor: pointer;
+    display: inline-block;
+    background-color: var(--colorRed);
+    color: var(--colorWhite);
+    padding: 1rem 2rem;
+    transition: var(--transition500);
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 1px solid transparent;
+}
+.btn-red:hover
+{
+    background-color: transparent;
+    color: var(--colorRed);
+    border-color: var(--colorRed);
+}
+.container{
+    width: var(--containerWidthLg);
+    margin: 0 auto;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+h1,h2{
+    font-size:31px;
+}
+

@@ -1,0 +1,123 @@
+.contact{
+    color: white;
+    padding: 6rem auto;
+    margin: 10rem auto;
+}
+:root{
+    --contactContainerHeight:400px;
+}
+
+.contactContainer{
+    background-color: var(--BgColor2);
+    /* height:var(--contactContainerHeight); */
+    border-radius: 1.5rem;
+    padding: 2rem 2rem;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 2rem;
+    height: 35rem;
+}
+.contactLeft{
+    /* height: calc(var(--contactContainerHeight)*1.2); */
+    background-color:var(--BgColor6);
+    padding: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 7rem;
+}
+.contactImg{
+    /* width: 13rem; */
+    margin: 1rem auto;
+}
+.contactLeft h2{
+    text-align: center;
+}
+.contactLeft p{
+    text-align: justify;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+.contactDetails{
+    margin: 0.8rem 0;
+}
+.contactDetails li{
+    display: flex;
+    gap: 0.8rem;
+}
+
+.ContactSocialIcons{
+    display: flex;
+    font-size: 1.5rem;
+    gap: 1rem;
+    margin-top: 1rem;
+    transition: var(--transition500);
+}
+
+.ContactSocialIcons li:hover:nth-child(1) a{
+color: var(--facebok);
+}
+.ContactSocialIcons li:hover:nth-child(2) a{
+color: var(--twitter);
+}
+.ContactSocialIcons li:hover:nth-child(3) a{
+color: var(--insta);
+}
+.ContactSocialIcons li:hover:nth-child(4) a{
+color: var(--linkdin);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 4rem;
+}
+.formName{
+    display: flex;
+    gap: 1.5rem;
+}
+form input[type="text"]{
+    width: 50%;
+}
+form input,textarea{
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--BgColor6);
+    color: white;
+}
+form button{
+    width: fit-content;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/* media Querries */
+/* tablet */
+@media (max-width:1024px){
+    .contact{
+        margin-top: 6rem;
+    }
+    .contactContainer{
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+    .contactLeft{
+        bottom: 0;
+        margin: 0;
+        border-radius: 50% 50% 0% 0%;
+    }
+    .contactImg{
+        max-width: 15rem;
+    }
+    form{
+       margin: 0;
+       gap: 0.7rem;
+    }
+    .formName{
+        gap: 0.7rem;
+    }
+}
+/* phones */
+@media (max-width:600px){
+
+}

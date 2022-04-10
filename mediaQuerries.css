@@ -1,0 +1,131 @@
+/* ++++++++++++++++++++ for tablet +++++++++++++++++*/
+@media (max-width:1024px){
+    
+    .container{
+        width: var(--containerWidthMd);
+    }h1{
+        font-size: 2.2rem;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+    h3{
+        font-size: 1.3rem;
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+    h5{
+        font-size: 1rem;
+    }
+
+    /* for navbar */
+    .navContainer>#openMenuBtn{
+        display: block;
+        width: 1.8rem;
+        height: 1.8rem;
+        font-size: 1.6rem;
+        border-radius: 5px;
+        background-color:var(--primaryColor);
+        color: white;
+    }
+   
+    
+    .navContainer{
+        position: relative;
+    }
+    .navContainer .menu{
+        position: absolute;
+        top: var(--navHeight);
+        left: 0;
+        right: 0;
+        background-color: var(--BgColor4);
+        flex-direction:column-reverse;
+        padding: 15px 0px;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: var(--transition200);
+        /* width: fit-content; */
+    }
+    .navContainer .menu .menuLinks{
+        flex-direction: column;
+        width: 100%;
+        gap: 0.9rem;
+        margin: 5px 0px;
+        padding: 0 2rem;
+        align-items: flex-start;
+    }
+    
+    .navContainer #togglecheck:checked~.menu{
+        transform: scaleY(1);
+    }
+    .dropBox{
+        position: relative;
+        top: 0;
+        left: 4rem;
+    }
+    
+    /* header section */
+    .headerContainer .headerLeft{
+        align-items: center;
+        text-align: center;
+        margin-top: 8rem;
+        margin-bottom: 0;
+    }
+
+    /* categories Section */
+    .facultySection{
+        height: auto;
+        margin-bottom: 3rem;
+    }
+    .facultyContainer{
+        grid-template-columns: 1fr;
+    }
+}
+/* ++++++++++++++++++++ for tablet ends +++++++++++++++++*/
+/* ++++++++++++++++++++ for mobile phones +++++++++++++++++*/
+@media (max-width:600px){
+    .container{
+        width: var(--containerWidthSm);
+    }
+    .course:hover{
+        transform: none;
+    }
+
+    h1{
+        font-size: 1.8rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 1.1rem;
+    }
+    h4{
+        font-size: 1rem;
+    }
+    h5{
+        font-size: 0.8rem;
+    }
+    
+        /* header section */
+        
+        /* courser section */
+        
+        /* categories section */
+        
+       .Facultyright{
+           grid-template-columns: repeat(2,1fr);
+       }
+      
+    
+        /* footer */
+        .foot{
+            text-align: center;
+        }
+        .socialIcons{
+            justify-content: center;
+            margin: 2rem 0rem;
+        }
+}
+/* ++++++++++++++++++++ for mobile phones ends +++++++++++++++++*/

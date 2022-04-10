@@ -1,0 +1,195 @@
+.gallery{
+    background-color: var(--BgColor5);
+    margin-top: var(--navHeight);
+    color:white;
+    padding: 4rem 0;
+}
+.gallery h2{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.galleryContainer{
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.galleryImage{
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: var(--transition500);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 220px;
+}
+.galleryImage::before,
+.galleryImage::after{
+    position: absolute;
+    content: '';
+    background-color: var(--BgColor6);
+    width: 93%;
+    height: 47%;
+    transition: var(--transition500);
+    z-index: inherit;-1
+}
+.galleryImage::before{
+    top: 3%;
+    transform:translateX(110%);
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+.galleryImage::after{
+    bottom: 3%;
+    transform:translateX(-110%);
+    border-radius: 0rem 0rem 1rem 1rem;
+}
+.galleryImage:hover::before,
+.galleryImage:hover::after{
+    transform:translateX(0%);
+    left: 3%;
+    right: 3%;
+}
+.productDetail{
+    position: absolute;
+    z-index: 12;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.8rem;
+    transform: rotate(90deg);
+    opacity: 0;
+    transition: var(--transition500);
+}
+.productDetail h3,
+.productDetail h2
+{
+    margin: 0;
+}
+
+.productDetail button{
+    padding: 0.3rem;
+    width: fit-content;
+}
+.productDetail h2{
+    font-size: 1.2rem;
+}
+.productDetail h3{
+    font-size: 1rem;
+}
+
+.galleryImage:hover .productDetail{
+    opacity: 1;
+    transform: rotate(0deg);
+}
+.galleryImage:hover{
+   box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.383);
+}
+.galleryBtnBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+}
+.galleryImage .description{
+    display: none;
+}
+/* created div by js in gallery js */
+.createdDiv{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem;
+    z-index: 12;
+    background-color: var(--BgColor6);
+}
+.clone{
+    width: 80%;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 40% 60%;
+    color: white;
+    background-color: var(--BgColor5);
+    padding: 1.5rem;
+}
+
+.clone .detailsDiv .details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.clone .description{
+  position: relative;
+}
+.clone .detailsDiv h2,
+.clone .detailsDiv h3{
+margin: 0.5rem 0;
+}
+
+.clone .detailsDiv .details{
+   opacity: 1;
+}
+.clone .removeCloneBtn{
+   position: absolute;
+   width: 50px;
+   height: 50px;
+   top: 2rem;
+    right: 2rem;
+   border-radius: 50%;
+   background-color: var(--BgColor2);
+   color: rgb(255, 255, 255);
+   font: 2.6rem;
+   cursor: pointer;
+}
+
+
+
+
+
+/* tablet */
+@media (max-width:1024px){
+    .galleryContainer{
+        grid-template-columns: repeat(3,1fr);
+        gap:1.3rem;
+    }
+   
+}
+/* mobile */
+@media (max-width:600px){
+    .galleryContainer{
+        gap: 0.8rem;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .galleryBtnBox{
+        flex-direction: row;
+    }
+    .galleryBtnBox button{
+        font-size: 0.7rem;
+    }
+   
+    .productDetail h2{
+        font-size: 1rem;
+    }
+    .productDetail h3{
+        font-size: 0.8rem;
+    }
+    
+   
+    
+}
+@media (max-width:800px){
+     /* for gallery div */
+     .clone{
+        grid-template-columns: 1fr;
+        /* height: 80vh; */
+    }
+}

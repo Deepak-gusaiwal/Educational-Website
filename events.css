@@ -2,7 +2,7 @@
 .eventBanner{
     margin-top: var(--navHeight);
     color: white;
-    background-image: url('../images/gallery Image/college.jpg');
+    background-image: url('./college.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
